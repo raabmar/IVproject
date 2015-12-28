@@ -1,0 +1,134 @@
+body {
+    font-family: "Roboto";
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill:none;
+    stroke: steelblue;
+    stroke-width: 2.5px;
+}
+
+.datamarker {
+    fill: #bada55;
+    fill-opacity: 0.5;
+    cursor: pointer;
+}
+
+/*Header*/
+header {
+    width: 100%;
+    height: 75px;
+    display: block;
+    border-bottom: 1px solid steelblue;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: right;
+    float: right;
+    width: 15%;
+    height: 100%;
+}
+
+/*Generation Selection Menu*/
+.switchImg {
+    width:32px;
+    height:32px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.gen-sel-menu {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.gen-btn {
+    background: #eee;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    float: left;
+    padding: 5px 30px;
+    margin: 0 3px;
+}
+.gen-btn:hover {
+    background: #ddd;
+}
+.gen-btn.active {
+    background: lightsteelblue;
+    border-color:darkblue;
+}
+
+.gen-btn.active:hover {
+    background: #bbddff;
+}
+
+.gen-btn p {
+    margin: 0px;
+    text-align: center;
+}
+
+/*Year-slider*/
+.sliderWrapper {
+    float: left;
+}
+.yearSlider {
+    width: 404px;
+}
+
+/*board*/
+.board {
+    height: 800px;
+    width: 100%;
+}
+
+/*district-selector*/
+.dist-sel {
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+
+.checkboxWrapper {
+    border-bottom: 1px solid steelblue;
+}
+
+.checkboxWrapper:hover {
+    background: lightsteelblue;
+}
+
+.textboxcaption {
+
+}
+
+/*map*/
+.map {
+    background: lightcyan;
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+
+/*diagrams*/
+.diagrams {
+    background:lightgrey;
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
