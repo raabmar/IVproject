@@ -61,21 +61,40 @@ header h1 {
 .gen-btn {
     background: #eee;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px #ddd;
+    border-style: inset;
     float: left;
-    padding: 5px 30px;
-    margin: 0 3px;
+    padding: 4px 30px;
+    margin: 0 4px;
 }
 .gen-btn:hover {
-    background: #ddd;
+    border-width: 2px;
+    border-style: inset;
+    margin: 0 3px;
 }
-.gen-btn.active {
-    background: lightsteelblue;
-    border-color:darkblue;
+.gen-btn.Babies.active {
+    background: #FFDD6F;
+    border-color:yellow;
 }
 
-.gen-btn.active:hover {
-    background: #bbddff;
+.gen-btn.Children.active {
+    background: #62A1B5;
+    border-color:darkcyan;
+}
+
+.gen-btn.Teens.active {
+    background: #EFF5E3;
+    border-color:#A0B0A0;
+}
+
+.gen-btn.Adults.active {
+    background: #C5DCA6;
+    border-color:darkseagreen;
+}
+
+.gen-btn.BestAgers.active {
+    background: #CBB5BB;
+    border-color:#A99;
 }
 
 .gen-btn p {
@@ -93,19 +112,20 @@ header h1 {
 
 /*board*/
 .board {
-    height: 800px;
+    height: 900px;
     width: 100%;
 }
 
 /*district-selector*/
 .dist-sel {
     height: 100%;
-    width: 20%;
+    width: 15%;
     float: left;
+    border-right: 1px solid lightsteelblue;
 }
 
 .checkboxWrapper {
-    border-bottom: 1px solid steelblue;
+    /*border-bottom: 1px solid lightsteelblue;*/
 }
 
 .checkboxWrapper:hover {
@@ -118,17 +138,33 @@ header h1 {
 
 /*map*/
 .map {
-    background: lightcyan;
+    border-right: 1px solid lightsteelblue;
     height: 100%;
-    width: 30%;
+    width: 34%;
     float: left;
+}
+
+.map img {
+    width: 100%;
 }
 
 /*diagrams*/
 .diagrams {
-    background:lightgrey;
     height: 100%;
-    width: 50%;
+    width: 49%;
     float: left;
+}
+
+.piechart  {
+    float: left;
+    margin: 0px 25px;
+}
+
+.slice {
+    font-size: 0.85em;
+}
+
+.dist-sel, .diagrams {
+    padding: 5px;
 }
 
