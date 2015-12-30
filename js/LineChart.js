@@ -1,7 +1,7 @@
 var lineChart = {
-    createChart: function () {
-        var height = 400;
-        var width = 600;
+    createAVGAgeLinzChart: function () {
+        var height = 120;
+        var width = 500;
         var margin = {top:20, right:20, bottom:30, left:50}
 
 
@@ -27,7 +27,8 @@ var lineChart = {
 
 
         //Deklaration DIV-Bereich für Diagramm
-        var svg = d3.select("body").append("svg")
+        var svg = d3.select(".avg-age-linz-diagram").append("svg")
+            .attr("class", 'avg-age-linz')
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g").attr("transform", "translate(" + margin.left+", " + margin.top + ")");
@@ -48,8 +49,10 @@ var lineChart = {
                 return d.year;
             }))
 
-            y.domain([0, d3.max(data, function(d) {
-                return d.amount;
+            y.domain([d3.max(data, function(d) {
+                return d.amount-2;
+            }), d3.max(data, function(d) {
+                return d.amount+2;
             })]);
 
             svg.append("g").attr("class", "x axis")
@@ -84,7 +87,7 @@ var lineChart = {
                 .on("mouseover", function(d){
                     d3.select(this).transition().duration(1000).ease("elastic")
                         .style("fill-opacity", 1.0)
-                        .attr("r", function(d) {return d.amount * 0.15 + 15})
+                        .attr("r", function(d) {return d.amount * 0.15 + 5})
                 })
                 .on("mouseout", function(d) {
                     d3.select(this).transition()

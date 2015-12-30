@@ -2,50 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Überblick Linz Bevölkerung</title>
-    <script src="//d3js.org/d3.v3.min.js" charset="UTF-8"></script>
-    <script src="js/LineChart.js" charset="UTF-8"></script>
+    <title>People of Linz</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
 
+    <script src="js/jquery-2.1.4.min.js" charset="UTF-8"></script>
+    <script src="//d3js.org/d3.v3.min.js" charset="UTF-8"></script>
+    <script src="js/LineChart.js" charset="UTF-8"></script>
+    <script src="js/main.js" charset="UTF-8"></script>
 </head>
 
-<style>
-    body {
-        font-family: "Roboto";
-    }
-
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-    }
-
-    .x.axis path {
-        display: none;
-    }
-
-    .line {
-        fill:none;
-        stroke: steelblue;
-        stroke-width: 2.5px;
-    }
-
-    .datamarker {
-        fill: #bada55;
-        fill-opacity: 0.5;
-        cursor: pointer;
-    }
-</style>
-
-
 <body>
-<h1>Demographic development Linz (2002 - 2015)</h1>
+
+<header class="header">
+    <div class="gen-sel-menu">
+        <div class="gen-btn Babies active" genName="Babies"><img class="switchImg" src="assets/crawling.png" /><p>0-3</p></div>
+        <div class="gen-btn Children active" genName="Children"><img class="switchImg" src="assets/jumping28.png" /><p>4-12</p></div>
+        <div class="gen-btn Teens active" genName="Teens"><img class="switchImg" src="assets/group58.png" /><p>13-17</p></div>
+        <div class="gen-btn Adults active" genName="Adults"><img class="switchImg" src="assets/businessmen18.png" /><p>18-59</p></div>
+        <div class="gen-btn BestAgers active" genName="BestAgers"><img class="switchImg" src="assets/old33.png" /><p>60-120</p></div>
+    </div>
+    <div class="sliderWrapper">
+        <input class="yearSlider" type="range" min="2002" max="2015" step="1" />
+        <div class="sliderRange">02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15</div>
+    </div>
+    <h1>Linz</h1>
+</header>
+
+<section class="board">
+    <section class="dist-sel">
+        <form>
+
+        </form>
+
+    </section>
+
+    <section class="map">
+        <img src="assets/STB_1957.png" title="Linz">
+    </section>
+
+    <section class="diagrams">
+
+        <section class="avg-age-linz-diagram">
+            <h3>Average Age of Linz</h3>
+        </section>
+        <section class="piecharts">
+            <section class="piechart chart1"></section>
+            <section class="piechart chart2"></section>
+            <section class="piechart chart3"></section>
+            <section class="piechart chart4"></section>
+        </section>
+
+    </section>
+</section>
+
+<footer>
+
+</footer>
+
 <script>
-    lineChart.createChart();
+    lineChart.createAVGAgeLinzChart();
 </script>
-
-
 </body>
 </html>

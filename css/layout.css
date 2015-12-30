@@ -1,0 +1,170 @@
+body {
+    font-family: "Roboto";
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill:none;
+    stroke: steelblue;
+    stroke-width: 2.5px;
+}
+
+.datamarker {
+    fill: #bada55;
+    fill-opacity: 0.5;
+    cursor: pointer;
+}
+
+/*Header*/
+header {
+    width: 100%;
+    height: 75px;
+    display: block;
+    border-bottom: 1px solid steelblue;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: right;
+    float: right;
+    width: 15%;
+    height: 100%;
+}
+
+/*Generation Selection Menu*/
+.switchImg {
+    width:32px;
+    height:32px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.gen-sel-menu {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.gen-btn {
+    background: #eee;
+    border-radius: 5px;
+    border: 1px #ddd;
+    border-style: inset;
+    float: left;
+    padding: 4px 30px;
+    margin: 0 4px;
+}
+.gen-btn:hover {
+    border-width: 2px;
+    border-style: inset;
+    margin: 0 3px;
+}
+.gen-btn.Babies.active {
+    background: #FFDD6F;
+    border-color:yellow;
+}
+
+.gen-btn.Children.active {
+    background: #62A1B5;
+    border-color:darkcyan;
+}
+
+.gen-btn.Teens.active {
+    background: #EFF5E3;
+    border-color:#A0B0A0;
+}
+
+.gen-btn.Adults.active {
+    background: #C5DCA6;
+    border-color:darkseagreen;
+}
+
+.gen-btn.BestAgers.active {
+    background: #CBB5BB;
+    border-color:#A99;
+}
+
+.gen-btn p {
+    margin: 0px;
+    text-align: center;
+}
+
+/*Year-slider*/
+.sliderWrapper {
+    float: left;
+}
+.yearSlider {
+    width: 404px;
+}
+
+/*board*/
+.board {
+    height: 900px;
+    width: 100%;
+}
+
+/*district-selector*/
+.dist-sel {
+    height: 100%;
+    width: 15%;
+    float: left;
+    border-right: 1px solid lightsteelblue;
+}
+
+.checkboxWrapper {
+    /*border-bottom: 1px solid lightsteelblue;*/
+}
+
+.checkboxWrapper:hover {
+    background: lightsteelblue;
+}
+
+.textboxcaption {
+
+}
+
+/*map*/
+.map {
+    border-right: 1px solid lightsteelblue;
+    height: 100%;
+    width: 34%;
+    float: left;
+}
+
+.map img {
+    width: 100%;
+}
+
+/*diagrams*/
+.diagrams {
+    height: 100%;
+    width: 49%;
+    float: left;
+}
+
+.piechart  {
+    float: left;
+    margin: 0px 25px;
+}
+
+.slice {
+    font-size: 0.85em;
+}
+
+.dist-sel, .diagrams {
+    padding: 5px;
+}
+
